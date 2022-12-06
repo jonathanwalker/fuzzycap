@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-    <img src="assets/fuzzycap.png">
+    <img align="center" src="assets/fuzzycap.png">
   <br>
   <br>
 </h1>
