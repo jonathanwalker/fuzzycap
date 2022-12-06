@@ -1,4 +1,4 @@
-package fuzzycap
+package main
 
 import (
 	"encoding/json"
@@ -8,8 +8,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/jonathanwalker/fuzzycap/pkg/fuzzyhash"
-	"github.com/jonathanwalker/fuzzycap/pkg/screenshot"
+	"fuzzycap/pkg/fuzzyhash"
+	"fuzzycap/pkg/screenshot"
 
 	"github.com/alexflint/go-arg"
 )
