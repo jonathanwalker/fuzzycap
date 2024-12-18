@@ -8,21 +8,19 @@ import (
 	"github.com/azr/phash"
 )
 
-// function to get fuzzy hash of an image
+// GetFuzzyHash computes a pHash-based fuzzy hash of an image file.
 func GetFuzzyHash(filename string) uint64 {
 	f, err := os.Open(filename)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("failed to open image file %s: %v", filename, err)
 	}
 	defer f.Close()
 
-	// get image.Image from file
 	img, _, err := image.Decode(f)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("failed to decode image %s: %v", filename, err)
 	}
 
 	hash := phash.DTC(img)
-
 	return hash
 }
