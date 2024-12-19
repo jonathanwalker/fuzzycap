@@ -12,11 +12,15 @@ FuzzyCap is a utility that allows you to take screenshots from a list of urls an
 Usage of fuzzycap is simple and all you need to do is specify a file with a list of urls. `fuzzycap -i urls.txt`. This will then output the url, screenshot location, and fuzzy hash of the site. 
 
 ```
-Usage: fuzzycap [--input INPUT]
+Usage: fuzzycap [--input INPUT] [--out OUT] [--quality QUALITY] [--threshold THRESHOLD]
 
 Options:
   --input INPUT, -i INPUT
-                         input file with list of urls
+                         input file with list of URLs
+  --out OUT              output JSON file [default: fuzzyhash-results.json]
+  --quality QUALITY      screenshot quality [default: 100]
+  --threshold THRESHOLD
+                         Hamming distance threshold for considering images different [default: 5]
   --help, -h             display this help and exit
 ```
 
